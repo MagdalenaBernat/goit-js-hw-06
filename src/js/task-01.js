@@ -1,45 +1,16 @@
 "use strict";
 
-// const listItems = list.children;
-// console.log(listItems);
+const categories = document.getElementsByClassName("item");
+console.log(categories);
 
-// //to wyżej czy to niżej?
+console.log(`Category: ${categories[0].firstElementChild.textContent}`);
+console.log(`Elements: ${categories[0].getElementsByTagName("li").length}`);
 
-// const categoryItems =
-// document.querySelectorAll(".li.item");
-// console.log(categoryItems);
+console.log(`Category: ${categories[1].firstElementChild.textContent}`);
+console.log(`Elements: ${categories[1].getElementsByTagName("li").length}`);
 
-//---------------------------
-
-const listItems = list.children;
-console.log(listItems);
-
-const numberOfItems = [...listItems.length];
-console.log(numberOfItems);
-
-
-const categories =
-    document.querySelectorAll("h2");
-
-
-console.log(`"Category: " $categories`);
-console.log(`"Elements: " $numberOfItems`);
-
-
-
-const heading = document.createElement("h2");
-
-    
-if (num1 > num2) {
-  biggerNumber = num1;
-} else {
-  biggerNumber = num2;
-}
-
-const num = (num1 > num2) ? num1 : num2; 
-
-
-
+console.log(`Category: ${categories[2].firstElementChild.textContent}`);
+console.log(`Elements: ${categories[2].getElementsByTagName("li").length}`);
 
 
 
