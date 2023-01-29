@@ -1,12 +1,17 @@
 "use strict";
 
-const textInput = document.getElementById("name-input");
+const textInput = document.querySelector("#name-input");
+const textOutput = document.querySelector("#name-output");
 
-const textOutput = document.getElementById("name-output");
-
-textInput.addEventListener("input", (event) => {
-textOutput.textContent = event.currentTarget.value;
+textInput.addEventListener("input", () => {
+    if (textInput.value === "") {
+        textOutput.textContent = "Anonymous"
+    }
+    else {
+        textOutput.textContent = textInput.value
+    }
 });
+
 
 
 // Napisz skrypt, który przy wpisywaniu tekstu w polu input input#name-input (zdarzenie input) wstawia jego aktualną wartość do span#name-output. Jeśli pole input jest puste, w spanie powinien wyświetlić się komunikat "Anonymous".

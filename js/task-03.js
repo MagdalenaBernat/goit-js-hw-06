@@ -30,6 +30,13 @@ const galleryItem = document.createElement('li');
   
 });
 
+gallery.style.display = "flex";
+gallery.style.display = "wrap";
+gallery.style.display = "center";
+gallery.style.flexDirection = "column";
+gallery.style.margin = "10px";
+gallery.style.listStyle = "none";
+
 
 // Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się lista ul.gallery.
 
