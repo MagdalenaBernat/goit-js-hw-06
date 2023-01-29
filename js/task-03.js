@@ -16,26 +16,24 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-console.log(gallery);
 
-images.forEach(function(value){
-
-const galleryItem = document.createElement('li');
-
-  galleryItem.insertAdjacentHTML('afterbegin', `<img src="${value.url}" alt="${value.alt}">`);
+images.forEach((el) => {
+  const galleryItem = document.createElement('li');
+  galleryItem.insertAdjacentHTML('afterbegin', `<img src="${el.url}" alt="${el.alt}" style="width: 900px
+  ; height: auto">`);
 
   gallery.append(galleryItem);
-
-  galleryItem.style.listStyleType = "none";
-  
 });
 
 gallery.style.display = "flex";
-gallery.style.display = "wrap";
-gallery.style.display = "center";
-gallery.style.flexDirection = "column";
-gallery.style.margin = "10px";
-gallery.style.listStyle = "none";
+gallery.style.flexWrap = "wrap";
+gallery.style.listStyle = "none";  
+
+
+
+
+
+
 
 
 // Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się lista ul.gallery.
