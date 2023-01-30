@@ -1,6 +1,6 @@
 "use strict";
 
-const boxesAdd = document.querySelector('#boxes');
+const boxesContainer = document.querySelector('#boxes');
 const inputAdd = document.querySelector('#controls>input');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
@@ -8,18 +8,20 @@ const destroyBtn = document.querySelector('[data-destroy]');
 const createBoxes = (amount) => {
   const boxesDiv = [];
 
-  for (let i = 0; i < amount; i++) {
+ let elementsCount = boxesContainer.children.length;
+debugger
+  for (let i = 0; i < amount; i++, elementsCount++) {
     const boxAdd = document.createElement('div');
-    boxAdd.style.width = `${30 + 10 * i}px`;
-    boxAdd.style.height = `${30 + 10 * i}px`;
+    boxAdd.style.width = `${30 + 10 * elementsCount}px`;
+    boxAdd.style.height = `${30 + 10 * elementsCount}px`;
     boxAdd.style.backgroundColor = getRandomHexColor();
     
     boxesDiv.push(boxAdd);
   }
 
-  boxesAdd.append(...boxesDiv);
+  boxesContainer.append(...boxesDiv);
 }
-const destroyBoxes = () => boxesAdd.innerHTML = '';
+const destroyBoxes = () => boxesContainer.innerHTML = '';
 createBtn.addEventListener('click', () => createBoxes(inputAdd.value));
 
 destroyBtn.addEventListener('click', destroyBoxes);
