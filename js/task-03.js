@@ -19,15 +19,10 @@ const gallery = document.querySelector('.gallery');
 
 images.forEach((el) => {
   const galleryItem = document.createElement('li');
-  galleryItem.insertAdjacentHTML('afterbegin', `<img src="${el.url}" alt="${el.alt}" style="width: 900px
-  ; height: auto">`);
+  galleryItem.insertAdjacentHTML('afterbegin', `<img src="${el.url}" alt="${el.alt}">`);
 
   gallery.append(galleryItem);
 });
-
-gallery.style.display = "flex";
-gallery.style.flexWrap = "wrap";
-gallery.style.listStyle = "none";  
 
 
 

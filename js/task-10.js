@@ -12,7 +12,7 @@ const createBoxes = (amount) => {
     const boxAdd = document.createElement('div');
     boxAdd.style.width = `${30 + 10 * i}px`;
     boxAdd.style.height = `${30 + 10 * i}px`;
-    boxAdd.style.backgroundColor=getRandomHexColor();
+    boxAdd.style.backgroundColor = getRandomHexColor();
     
     boxesDiv.push(boxAdd);
   }
